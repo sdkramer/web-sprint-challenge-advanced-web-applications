@@ -97,3 +97,14 @@ form {
     margin-top: 16px;
   }
 }
+
+body {
+  background-color: #9cf5ed;
+}
+body > .grid {
+  height: 100%;
+}
+
+.column {
+  max-width: 450px;
+}
