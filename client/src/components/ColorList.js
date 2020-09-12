@@ -8,7 +8,7 @@ const initialColor = {
 };
 
 const ColorList = ({ colors, updateColors }) => {
-  console.log(colors);
+  console.log("colors state: ", colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
 
@@ -27,6 +27,7 @@ const ColorList = ({ colors, updateColors }) => {
       .put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
       .then((res) => {
         console.log("edit put res.data: ", res.data);
+        // updateColors(...colors, {res.data})
       })
       .catch((err) => console.log("edit put error: ", err));
   };
